@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <form id="calc">
+        <div id="addition">
+            <p>Addition</p>
+            <input type="number" class="numbers" id="add1"> + <input type="number" class="numbers" id="add2"> = <span id="addAnswer"></span>
+            <br>
+            <input type="button" id="addSubmit" value="ADD IT!">
+        </div>
+        <div id="subtraction">
+            <p>Subtraction</p>
+            <input type="number" class="numbers" id="sub1"> - <input type="number" class="numbers" id="sub2"> = <span id="subAnswer"></span>
+            <br>
+            <input type="button" id="subSubmit" value="SUBTRACT IT!">
+        </div>
+        <div id="multiplication">
+            <p>Multiplication</p>
+            <input type="number" class="numbers" id="mul1"> * <input type="number" class="numbers" id="mul2"> = <span id="mulAnswer"></span>
+            <br>
+            <input type="button" id="mulSubmit" value="MULTIPLY IT!">
+        </div>
+
+        <br>
+        <input type="reset" value="RESET THIS THING!" id="reset">
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

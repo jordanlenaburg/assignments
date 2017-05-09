@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Airlines 'R Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <center>
+        <h1>Passenger information</h1>
+        <form id="passengerinfo" onsubmit="submitForm();">
+            <table>
+                <tr>
+                    <td class="desc">Basic Info</td>
+                    <td>
+                        <input type="text" id="fname" name="fname" placeholder="First Name">
+                    </td>
+                    <td>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name">
+                    </td>
+                    <td>
+                        <input type="number" id="age" name="age" placeholder="Age">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="desc">Gender</td>
+                    <td>
+                        <input type="radio" id="gender" name="gender" value="Male">Male
+                    </td>
+                    <td>
+                        <input type="radio" id="gender" name="gender" value="Female">Female
+                    </td>
+                    <td>
+                        <input type="radio" id="gender" name="gender" value="Other">Other
+                    </td>
+                </tr>
+
+
+                <tr>
+
+                    <td class="desc">Destination</td>
+                    <td></td>
+                    <td>
+                        <select name="location" id="location">
+                        <option value="LasVegas">Las Vegas</option>
+                 
+                        <option value="Honolulu">Honolulu</option>
+                  
+                        <option value="NewYork">New York</option>
+                  
+                        <option value="MiddleEarth">Middle Earth</option>
+                   
+                        <option value="Narnia">Narnia</option>
+                    
+                        <option value="hell">Hell</option>
+                        </select>
+                        <td></td>
+                </tr>
+                <tr>
+                    <td class="desc" rowspan="2">Dietary Restrictions</td>
+                    <td>
+                        <input type="checkbox" id="diet1" name="diet" value="vegan">Vegan
+                    </td>
+                    <td>
+                        <input type="checkbox" id="diet2" name="diet" value="vegetarian">Vegetarian
+                    </td>
+                    <td>
+                        <input type="checkbox" id="diet3" name="diet" value="carnetarian">Carnetarian
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="diet4" name="diet" value="gluten-free">Gluten Free
+                    </td>
+                    <td>
+                        <input type="checkbox" id="diet5" name="diet" value="low-carb">Low Carb
+                    </td>
+                    <td>
+                        <input type="checkbox" id="diet6" name="diet" value="sunlight">Photosynthesis
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <button id="submit">Submit</button>
+    </center>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+body {
+    background: url(background-images-for-websites-27.jpg) center top;
+}
+
+#h1 {
+    font-family: companyName;
+    font-size: 45px;
+}
+
+#h2 {
+    font-family: cursive;
+}
+
+#foot {
+    /*    position: fixed;*/
+    /*    bottom: 25px;*/
+    right: 0px;
+    font-size: 25px;
+    background: white;
+    opacity: .7;
+    /*    z-index: -10;*/
+}
+
+#ontop {
+    z-index: 10;
+    background: white;
+}
+
+li {
+    border-style: groove;
+}
+
+#logo {
+    max-width: 20%;
+}
+
+.notbig {
+    max-width: 45%;
+    float: right;
+    padding: 8px;
+}
+
+.people {
+    float: left;
+}
+
+#collapse {
+    max-width: 75%
+}
+
+form {
+    background: white
+}
+
+.imgfill {
+    max-width: 80%;
+}
+
+#money {
+    max-width: 50%;
+    box-shadow: 10px 10px 5px grey
+}
+
+.section {
+    font-size: 25px;
+    background: white;
+    opacity: .7
+}
+
+p {
+    background: white;
+    padding: 3px;
+}
+
+strong {
+    font-weight: 900;
+}
+
+#whoweare {
+    max-width: 10%;
+}
+
+@font-face {
+    font-family: companyName;
+    src: url(EnthrallPersonalUse.ttf)
+}
+
+@media (min-width: 1680px) {
+    body {
+        background-size: 100%;
+    }
+}
+
+@media (max-width: 500px)

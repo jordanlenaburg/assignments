@@ -1,0 +1,12 @@
+body {
+    margin: auto;
+    width: 600px;
+}
+
+.changer {
+    text-align: center;
+    padding: 150px;
+    background-color: lightgray;
+    border: solid black 5px;
+    max-width: 300px;
+}

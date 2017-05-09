@@ -1,0 +1,55 @@
+body {
+    background-image: url(https://aff5fa4925746bf9c161-fb36f18ca122a30f6899af8eef8fa39b.ssl.cf5.rackcdn.com/applications/1043/assets/img/intro/main-background.jpg);
+    background-size: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: floralwhite;
+    opacity: .6;
+}
+
+p {
+    color: floralwhite;
+    opacity: .8;
+}
+
+input {
+    opacity: .8;
+}
+
+.baddie {
+    text-align: center;
+    max-width: 100%;
+}
+
+.money {
+    background-image: url("https://image.ibb.co/k9Lfy5/tumblr_mdyhjl_JFPS1rrftcdo1_1280_copy.png");
+    z-index: -10;
+}
+
+@media (max-width:500px){
+    .baddie {
+        display: none;
+    }
+    
+}
+
+/*background coins
+<img src="https://image.ibb.co/bXMvY5/coins.png">*/
+
+
+/*goomba image source, clicked
+<img class="baddie" src="https://image.ibb.co/gexcD5/Goomba_NSMB.png">*/
+
+
+/*bob-omb clicked
+<img class="baddie" src="https://image.ibb.co/nxVa0k/Bobomb_NSMBU.png">*/
+
+
+/*cheep cheep clicked
+<img class="baddie" src="https://image.ibb.co/iEVxD5/200px_Cheep_Cheep_NSMBU.png">*/

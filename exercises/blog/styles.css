@@ -1,0 +1,28 @@
+.fixed {
+    background: lightblue;
+    text-align: center;
+    position: fixed;
+    top: 2%;
+    left: 10%;
+}
+
+li {
+    font-size: 25px;
+}
+
+img {
+    float: left;
+    padding: 5px;
+}
+
+.right {
+    float: right;
+}
+
+p {
+    text-align: justify;
+}
+@media (max-width: 990px);
+#img3 {
+    width: 50%;
+}

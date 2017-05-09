@@ -1,0 +1,12 @@
+.desc {
+    text-align: center;
+    border-right: solid;
+}
+
+tr td {
+    border-bottom: solid;
+    padding: 5px
+}
+body {
+    margin: auto;
+}

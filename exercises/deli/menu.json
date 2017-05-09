@@ -1,0 +1,59 @@
+{
+    "appetizers": [
+        {
+            "fried-pickles": ["pickles", "panko-breading", "deep-fried"],
+            "description": "Pickles deep-fried in panko breading"
+        },
+        {
+            "chips-and-dip": [
+                {
+                    "chips": ["lays", "tortilla"]
+                },
+                {
+                    "dip": ["french-onion", "salsa"]
+                }
+                    ],
+            "description": "Lays chips with french-onion dip || Tortilla chips with salsa"
+        }
+    ],
+    "cold-sammiches": [
+        {
+            "veggie-lovers": ["all-the-veggies", "bread", "mayo"],
+            "description": "Veggie sandwhich with all the veggies we offer, served on bread with mayo"
+        },
+        {
+            "cold-cuts": ["salami", "pepperoni", "ham", "bread", "mayo"],
+            "description": "Meat lovers only, served with salami, pepperoni and ham, on bread with mayo"
+        }
+    ],
+    "hot-sammiches": [
+        {
+            "pizza": ["pepperoni", "marinara", "hoagie", "mozzerella"],
+            "description": "Pizza on a sandwich! Pepperoni with marinara sauce and topped with mozzerella cheese, served on a hoagie roll"
+        },
+        {
+            "meatball": ["italian meatballs", "marinara", "hoagie", "mozzerella", "parmesean"],
+            "description": "Classic meatball sub with meatballs, marinara, mozzerella and parmesean cheeses, served on a hoagie roll"
+        }
+    ],
+    "desserts": [
+        {
+            "cheesecake": ["cheesecake", "fresh strawberries", "whipped cream", "crumble crust"],
+            "description": "Classic new-york style cheesecake served with plenty of whipped cream and fresh strawberries"
+        },
+        {
+            "key-lime-pie": ["key lime filling", "graham crust", "whipped cream"],
+            "description": "Lime flavored cream pie served in a graham crust with whipped cream"
+        }
+    ],
+    "drinks": [
+        {
+            "italian-soda": ["carbonated water", "syrup"],
+            "description": "Italian soda, choose from 28 different flavor syrups"
+        },
+        {
+            "water": ["water"],
+            "description": "Plain water"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+#name {
+    padding-top: 10px;
+    padding-left: 75px;
+    background: gold;
+    font-size: 50px;
+    color: red;
+    font-family: mario;
+}
+
+#pic {
+    background: red;
+}
+
+img {
+    max-width: 35%;
+}
+
+#abt {
+    padding-top: 10px;
+    font-size: 40px;
+    color: red;
+    font-family: mario;
+}
+
+#stuff {
+    font-size: 20px;
+    color: red;
+    font-weight: 900;
+    font-stretch: extra-expanded;
+    
+}
+
+#shroom {
+    background: gold;
+}
+
+#shroomPic {
+    float: right;
+    max-width: 10%;
+}
+
+@font-face {
+    font-family: mario;
+    src: url(SuperMario256.ttf);
+}

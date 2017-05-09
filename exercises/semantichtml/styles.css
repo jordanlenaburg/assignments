@@ -1,0 +1,48 @@
+header {
+    font-size: 28px;
+    color: darkred;
+    font-family: serif;
+    text-align: center;
+}
+
+.sub {
+    font-size: 20px;
+    color: darkgreen;
+}
+
+nav {
+    float: right;
+    width: 30%;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    border: 5px;
+    border-style: double;
+    border-color: black;
+}
+
+footer {
+    color: darkblue;
+    text-align: center;
+}
+
+img {
+    width: 34%;
+    padding: 20 px;
+    border: 3px;
+    border-color: chocolate;
+    border-style: dashed;
+    max-height: 150px;
+}
+body {
+    background-image: url(http://kaba35.com/wp-content/uploads/2015/11/Savin-NY-Website-Background-Web1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
