@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mario's Pest Control Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1 class="center-align hoverable container"><img src="https://image.ibb.co/ik0cBQ/super_mario_maker_1.png" width=100%></h1>
+    <audio id="coin" src="sounds/Mario-coin-sound.mp3"></audio>
+    <div class="hoverable container">
+        <center>
+            <p class="flow-text black">Welcome to Super Mario's Pest Control Service, home of all your baddie removal needs. Below you can find a cost breakdown of our services.</p>
+        </center>
+    </div>
+    <div class="row container">
+        <div class="center-align hoverable container col s4">
+            <p class="center-align flow-text black" id="bobText">Bob-ombs:<br>7 coins<br>
+                <span id="bobPic"><img class="baddie" src="https://image.ibb.co/by4nVk/120px_SMB_Bob_omb.png"></span><br>
+                <input class="center-align text black" id="bob" type="number" placeholder="Enter how many Bob-ombs"><br> Total price: <span id="bobTotal"></span>
+            </p>
+        </div>
+
+        <div class="center-align hoverable container col s4">
+            <p class="center-align flow-text black" n id="goombaText">Goombas:<br>5 coins<br>
+                <span id="goombaPic"><img class="baddie" src="https://image.ibb.co/eTPhwQ/draw_goomba_step_last_copy.png"></span><br>
+                <input class="center-align text black" id="goomba" type="number" placeholder="Enter how many Goombas"><br> Total price: <span id="goombaTotal">0</span>
+            </p>
+        </div>
+
+        <div class="center-align hoverable container col s4">
+            <p class="center-align flow-text black" id="cheepText">Cheep Cheeps:<br>11 coins<br>
+                <span id="cheepPic"><img class="baddie" src="https://image.ibb.co/eF3EAk/180px_Cheep_Cheep_SMB.png"></span><br>
+                <input class="center-align text black" id="cheep" type="number" placeholder="Enter how many Cheep Cheeps"><br> Total price: <span id="cheepTotal"></span>
+            </p>
+        </div>
+        <br>
+        <div id="bottomTotal" class="center-align container col s12">
+            <p class="center-align flow-text black">
+                Total for all baddies caught:<br> <span id="totalTotal">0</span>
+            </p>
+
+        </div>
+        <div class="center-align container col s12">
+            <button class="center-align" id="nightVision"><span id="nightText">Activate Night Vision</span></button>
+        </div>
+    </div>
+    <footer class="center-align hoverable container black">Email Mario at: <a href="mailto:mario@marios-pest-control.com">mario@marios-pest-control.com</a><br>Visit our main site at <a>https://mario-bros.com</a><br>Stop by our office at: #1 MSquared Way, Capital City, Mushroom Kingdom</footer>
+    <div class="money">
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
