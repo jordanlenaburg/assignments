@@ -1,0 +1,1 @@
+This assignment was to remove duplicates of a given input string and post back the remaining letters . . . and the duplicates as a second string.

@@ -1,0 +1,1 @@
+This assignment was to use vanilla JS AJAX request and post that information to a static website using correct styling.

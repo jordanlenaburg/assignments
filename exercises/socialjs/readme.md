@@ -1,0 +1,1 @@
+This assignment was to create objects with methods inside which represented people and traits that people could have.

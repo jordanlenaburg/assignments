@@ -1,0 +1,1 @@
+This was to create a basic javascript function.

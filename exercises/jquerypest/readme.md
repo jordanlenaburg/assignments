@@ -1,0 +1,1 @@
+This assignment was to update one of my previous projects into jQuery and add CSS styling

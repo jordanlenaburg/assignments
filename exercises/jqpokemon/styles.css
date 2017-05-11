@@ -1,0 +1,27 @@
+body {
+    margin: auto;
+    background-image: url(images/pokemon_pokeball-wallpaper-2560x1600.jpg);
+    max-width: 100%;
+    background-size: 100%;
+}
+
+#results {
+    background-color: black;
+    color: aliceblue;
+    opacity: .7;
+}
+
+a {
+    color: aliceblue !important;
+}
+
+p {
+    font-size: 16px !important;
+    font-family: pokemon;
+    letter-spacing: 3px;
+}
+
+@font-face {
+    font-family: pokemon;
+    src: url("/fonts/PokemonSolid.ttf")
+}

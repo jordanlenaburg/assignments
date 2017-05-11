@@ -1,0 +1,1 @@
+This assignment was to create a responsive website which looked like a newspaper print.

@@ -1,0 +1,1 @@
+This warmup was to reinforce using logical operators on array properties and creating methods within objects

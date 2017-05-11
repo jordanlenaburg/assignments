@@ -1,0 +1,1 @@
+This assignment was to create a simple blog which featured pictures.

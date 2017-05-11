@@ -1,0 +1,1 @@
+This assignment was to create a webpage using an AJAX request and then post the the returned data in a formatted structure.

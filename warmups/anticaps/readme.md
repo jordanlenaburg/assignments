@@ -1,0 +1,1 @@
+This warmup was to reinforce checking for conditions and altering data based on the results

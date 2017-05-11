@@ -1,0 +1,1 @@
+This assignment was to create a simple "AI" which would manipulate strings of entered data.

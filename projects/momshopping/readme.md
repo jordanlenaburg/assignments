@@ -1,0 +1,1 @@
+This project was to practice styling with basic HTML/CSS and dynamically altering elements within a page/webapp using jQuery

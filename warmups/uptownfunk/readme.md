@@ -1,0 +1,1 @@
+This warmup was to reinforce the previous day's lesson of using array methods.

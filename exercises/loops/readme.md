@@ -1,0 +1,1 @@
+This assignment was to use loops to check strings for specific information and return other info.

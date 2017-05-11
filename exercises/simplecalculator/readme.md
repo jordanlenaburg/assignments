@@ -1,0 +1,1 @@
+This assignment was to create a simple calculator which could accept input and perform simple math operations.

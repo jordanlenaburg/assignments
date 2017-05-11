@@ -1,0 +1,1 @@
+This assignment was to create a calculator using only JS and console inputs

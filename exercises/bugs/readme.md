@@ -1,0 +1,1 @@
+This assignment was to debug some code which was given to us. Specifically I learned to check the spelling of every single word.

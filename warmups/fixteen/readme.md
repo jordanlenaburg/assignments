@@ -1,0 +1,1 @@
+This warmum was to reinforce passing parameters into functions and using logical operators to check conditions within the parameters

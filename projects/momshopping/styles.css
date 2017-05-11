@@ -1,0 +1,40 @@
+body {
+    margin: auto;
+    background-image: url(images/Lined-Paper-Background-For-Free.jpg);
+    background-size: 100%;
+}
+
+h2,
+p {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border: solid 2px;
+}
+
+th {
+    text-align: center;
+    border: groove;
+}
+
+td {
+    border: groove;
+}
+
+.delete {
+    text-align: right;
+}
+
+.item {
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}

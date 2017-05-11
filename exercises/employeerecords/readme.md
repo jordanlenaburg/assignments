@@ -1,0 +1,1 @@
+This assignment was to create a constructor and then new objects using that constructor with some edited properties.

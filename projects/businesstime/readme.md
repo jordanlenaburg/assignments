@@ -1,0 +1,1 @@
+This project was to create a static website of an example business using the Bootstrap grid system with multiple pages. It needed to be responsive and have a professional appearance.

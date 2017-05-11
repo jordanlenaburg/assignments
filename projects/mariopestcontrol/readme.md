@@ -1,0 +1,1 @@
+This was the first project due. It was touched up from vanilla JS to jQuery. It practiced using event listeners and calculating inputs.

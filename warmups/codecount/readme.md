@@ -1,0 +1,1 @@
+This warmup was to reinforce checking conditions in strings and combining logical operations to achieve a desired result

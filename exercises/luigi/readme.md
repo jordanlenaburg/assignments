@@ -1,0 +1,1 @@
+This assignment was to recreate a website using the bootstrap grid system and make it responsive.

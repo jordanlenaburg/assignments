@@ -1,0 +1,1 @@
+This assignment was to create a javascript object then read properties of that object

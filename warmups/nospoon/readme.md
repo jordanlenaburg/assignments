@@ -1,0 +1,1 @@
+This warmum was to get us used to thinking of real life objects as JavaScript objects

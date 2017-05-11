@@ -1,0 +1,1 @@
+This assignment was to recreate a color-grid without using bootstrap and only using plain HTML and CSS

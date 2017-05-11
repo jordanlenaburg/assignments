@@ -1,0 +1,1 @@
+This assignment was to practice using simple CSS and HTML to create a static webpage

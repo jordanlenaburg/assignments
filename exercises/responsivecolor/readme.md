@@ -1,0 +1,1 @@
+This assignment was to create a color grid using bootstrap which would be responsive to changes in the size of the browser.

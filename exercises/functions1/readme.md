@@ -1,0 +1,1 @@
+This assignment was to create several basic javascript functions which performed different actions

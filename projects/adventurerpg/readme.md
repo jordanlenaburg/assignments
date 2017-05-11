@@ -1,0 +1,1 @@
+This project was to create a console-based RPG. It involved logical operators, for loops, callback functions, constructors and data alteration. It was also tons of fun.

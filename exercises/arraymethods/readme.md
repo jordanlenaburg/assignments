@@ -1,0 +1,1 @@
+This assignment was to practice using array methods.
