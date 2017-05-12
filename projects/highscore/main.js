@@ -58,9 +58,9 @@ function scoreSubmit() {
         <tr class="info">
                  <td>Jordan</td>
                 <td>` +
-            game + `</td>
+            scoreRow.game + `</td>
                 <td>` +
-            date + `</td>
+            scoreRow.date + `</td>
                 <td>` +
             min + ":" + (parseInt(sec) + num) + `</td>
                 <td class ="red" >You'll never beat my score!</td>
@@ -121,7 +121,6 @@ function rearrange(type) {
             sorty[i].talk + `</td>
         </tr>`)
     }
-
 }
 
 

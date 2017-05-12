@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container align-center body">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1>Jordan's Bounty list</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-2 text-right">
+                Title:
+            </div>
+            <div class="col-xs-2 col-md-2 text-left">
+                <input type="text" id="title" placeholder="Bounty Title">
+            </div>
+            <div class="col-xs-2 col-md-2 text-right">
+                Description:
+            </div>
+            <div class="col-xs-2 col-md-2 text-left">
+                <input type="text" class="align-left" id="desc" placeholder="What needs done?">
+            </div>
+            <div class="col-xs-2 col-md-2 text-right">
+                Price:
+            </div>
+            <div class="col-xs-2 col-md-2 text-left">
+                <input type="number" class="smaller" id="price" placeholder="Price">
+            </div>
+        </div>
+        <div class="row align-justify">
+            <div class="col-xs-2 col-md-2 text-right">
+                Image:
+            </div>
+            <div class="col-xs-2 col-md-2 text-left">
+                <input type="text" id="img-url" placeholder="Image URL of Bounty">
+            </div>
+            <div class="col-xs-2 col-md-2 text-right">
+                Completed?
+            </div>
+            <div class="col-xs-2 col-md-2 text-left">
+                No
+                <input type="radio" id="completed" name="radio" value="false" checked> Yes
+                <input type="radio" name="radio" value="true">
+            </div>
+            <div class="col-xs-2 col-md-2 text-right">
+                Bounty ID:
+            </div>
+            <div class="col-xs-2 col-md-2 text-left">
+                <input type="text" class="smaller" id="bounty-id" placeholder="Bounty ID">
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 text-right">
+                <button class="btn btn-success text-center" id="add">Add</button>
+            </div>
+            <div class="col-xs-6 col-md-6 text-left">
+                <button class="btn btn-info text-center" id="update">Update</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 text-center">
+                <button class="btn btn-info" id="get-list">Get Current List</button>
+            </div>
+
+            <div class="col-xs-6 col-md-6 text-center">
+                <button class="btn btn-danger" id="del">Delete Checked Items</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <table id="list">
+                <tr>
+                    <th class="table-check">X</th>
+                    <th class="table-title">Title</th>
+                    <th class="table-desc">Description</th>
+                    <th class="table-price">Price</th>
+                    <th class="table-img">Image</th>
+                    <th class="table-status">Status</th>
+                    <th class="table-id">Bounty ID</th>
+                </tr>
+
+                <tr>
+                    <td class="table-check"><input type="radio" class="deleter" name="deleter"></td>
+                    <td class="table-title">test</td>
+                    <td class="table-desc">test</td>
+                    <td class="center table-price">test</td>
+                    <td class="center table-img">test</td>
+                    <td class="center table-status">test</td>
+                    <td class="table-id">test</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
