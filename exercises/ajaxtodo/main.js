@@ -4,7 +4,7 @@ $("#get-list").click(getList);
 $("#add").click(addToList);
 $("#update").click(updateToDo);
 $("#del").click(delToDo);
-$(".deleter").click(updateVals);
+$("body").on('click', '.deleter', updateVals);
 
 
 
@@ -25,6 +25,9 @@ function estVar() {
     if ($("#completed").prop("checked") === false) {
         completeCheck = true;
     };
+    if ($("#price").val() === "") {
+        $("#price").val(0);
+    };
     newTodo = {
         "title": $("#title").val(),
         "description": $("#desc").val(),
@@ -35,15 +38,20 @@ function estVar() {
     bountyId = $("#bounty-id").val();
     console.log(bountyId);
 }
+getList();
+
+var jData = {};
 
 function updateVals() {
-    $(this).
-    //    var parent = $("#list");
-    //    for (var i = 1; i <= trNum; i++) {
-    //        if ($("#box" + i).prop("checked") === true) {
-    //            $("#tr" + i).remove();
-    //        }
-    //    }
+    console.log(jData);
+    var selector = parseInt(this.id);
+    for (var i = 0; i <= selector; i++) {
+        $("#title").val(jData[i].title);
+        $("#desc").val(jData[i].description);
+        $("#price").val(jData[i].price);
+        $("#img-url").val(jData[i].imgUrl);
+        $("#bounty-id").val(jData[i]._id);
+    }
 }
 
 //////////////////////////////////
@@ -51,6 +59,7 @@ function updateVals() {
 //////////////////////////////////
 
 function getList() {
+    var itemIndex = 0;
     $.ajax({
         url: "https://api.vschool.io/jordanlenaburg/todo",
         type: "GET",
@@ -66,11 +75,12 @@ function getList() {
                 <th class="table-id">Bounty ID</th>
             </tr>`
             var data = JSON;
+            jData = data;
             for (var i = 0; i < data.length; i++) {
                 if (data[i].imgUrl === "") {
                     var image = "No Image"
                 } else {
-                    var image = `<img class="small-img" src="` + data[i].imgUrl + `" />`
+                    var image = `<a href="` + data[i].imgUrl + `" target="_blank"><img class="small-img" src="` + data[i].imgUrl + `" /></a>`
                 };
                 if (data[i].completed === true) {
                     var done = "Complete";
@@ -79,7 +89,7 @@ function getList() {
                 };
                 finalInfo += `     
             <tr>
-                <td class="table-check"><input type="radio" class="deleter" name="deleter"></td>
+                <td class="table-check"><input type="radio" class="deleter" name="deleter" id="` + itemIndex + `"></td>
                 <td class="table-title">` + data[i].title + `</td>
                 <td class="table-desc">` + data[i].description + `</td>
                 <td class="center table-price">` + data[i].price + `</td>
@@ -88,13 +98,23 @@ function getList() {
                 <td class="table-id">` + data[i]._id + `</td>
             </tr>`;
                 $("#list").html(finalInfo);
+                itemIndex++
             }
+            $("#title").val("");
+            $("#desc").val("");
+            $("#price").val("");
+            $("#img-url").val("");
+            $("#bounty-id").val("");
         }
     })
 }
 
 function addToList() {
     estVar();
+    if ($("#title").val() === "") {
+        alert("Please enter a title");
+        return
+    };
     $.ajax({
         type: "POST",
         url: "https://api.vschool.io/jordanlenaburg/todo",
@@ -114,37 +134,31 @@ var xhr = new XMLHttpRequest();
 
 function updateToDo() {
     estVar();
+    if ($("#title").val() === "") {
+        alert("Please enter a title");
+        return
+    };
+    if ($("#bounty-id").val() === "") {
+        alert("Please select an existing bounty");
+        return
+    }
     newTodo._id = bountyId;
     xhr.open("PUT", "https://api.vschool.io/jordanlenaburg/todo/" + bountyId, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(newTodo));
-    getList();
+    setTimeout(getList, 500);
 }
 
 function delToDo() {
     estVar();
+    if ($("#title").val() === "") {
+        alert("Please enter a title");
+        return
+    };
     newTodo._id = bountyId;
+    console.log(newTodo._id);
     xhr.open("DELETE", "https://api.vschool.io/jordanlenaburg/todo/" + bountyId, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send();
-    getList();
+    setTimeout(getList, 1000);
 }
-
-
-
-//var finalInfo = "";
-//
-//xhr.open("GET", "http://api.vschool.io:6543/pokemon.json", true);
-//xhr.send();
-//
-//xhr.onreadystatechange = function parsePokemon() {
-//    if (xhr.readyState === 4 && xhr.status === 200) {
-//        var data = JSON.parse(xhr.responseText);
-//        console.log(data.objects[0].pokemon);
-//        for (var i = 0; i < data.objects[0].pokemon.length; i++) {
-//            finalInfo += "{<br>name: " + data.objects[0].pokemon[i].name + "<br>resource_uri: " + data.objects[0].pokemon[i].resource_uri + "<br>}<br>";
-//            document.getElementById("results").innerHTML = finalInfo;
-//
-//        }
-//    }
-//}
