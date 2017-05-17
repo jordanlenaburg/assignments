@@ -84,18 +84,20 @@ function getList() {
                 };
                 if (data[i].completed === true) {
                     var done = "Complete";
+                    var strikethrough = "strikethrough";
                 } else {
                     var done = "Incomplete";
+                    var strikethrough = "";
                 };
                 finalInfo += `     
             <tr>
                 <td class="table-check"><input type="radio" class="deleter" name="deleter" id="` + itemIndex + `"></td>
-                <td class="table-title">` + data[i].title + `</td>
-                <td class="table-desc">` + data[i].description + `</td>
-                <td class="center table-price">` + data[i].price + `</td>
-                <td class="center table-img">` + image + `</td>
-                <td class="center table-status">` + done + `</td>
-                <td class="table-id">` + data[i]._id + `</td>
+                <td class="table-title ` + strikethrough + `">` + data[i].title + `</td>
+                <td class="table-desc ` + strikethrough + `">` + data[i].description + `</td>
+                <td class="center table-price ` + strikethrough + `">` + data[i].price + `</td>
+                <td class="center table-img ` + strikethrough + `">` + image + `</td>
+                <td class="center table-status ` + strikethrough + `">` + done + `</td>
+                <td class="table-id ` + strikethrough + `">` + data[i]._id + `</td>
             </tr>`;
                 $("#list").html(finalInfo);
                 itemIndex++

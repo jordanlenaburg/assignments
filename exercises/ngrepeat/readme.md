@@ -1,0 +1,1 @@
+Exercise to solidify teaching of Angular NG-Repeat

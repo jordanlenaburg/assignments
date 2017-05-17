@@ -28,6 +28,10 @@ td {
     padding: 2px;
 }
 
+.strikethrough {
+    text-decoration: line-through !important;
+}
+
 .small-img {
     max-width: 30%;
 }

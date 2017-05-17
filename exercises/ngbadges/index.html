@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainController">
+    <br>
+    <div class="container">
+        <div class="badge-border">
+            <br>
+            <form name="form">
+                <div class="row row-border">
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="text" placeholder="First Name" class="fill-width" ng-model="obj.fName" required ng-minlength="3"></div>
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="text" placeholder="Last Name" class="fill-width" ng-model="obj.lName" required ng-minlength="3"></div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="email" placeholder="Email" class="fill-width" ng-model="obj.eml" required ng-minlength="3"></div>
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="text" placeholder="Place of Birth" class="fill-width" ng-model="obj.birthPlace" required ng-minlength="3"></div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="number" placeholder="Phone" class="fill-width" ng-model="obj.phone" ng-minlength="3"></div>
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="text" placeholder="Favorite Food" class="fill-width" ng-model="obj.food" required ng-minlength="3"></div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12 div-spacing">
+                        <textarea rows="5" class="fill-width" placeholder="Tell us about yourself" ng-model="obj.about" required ng-minlength="3"></textarea>
+                    </div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12 text-center div-spacing">
+                        <!--                        <input type="submit" class="btn submit" id="submit" value="Submit" />-->
+                        <button class="btn submit" ng-click="fillBadge(obj)" ng-disabled="form.$invalid">Submit</button>
+                    </div>
+                    <br><br><br>
+                </div>
+            </form>
+        </div>
+
+        <br>
+        <br>
+        <div class="badge-border">
+            <div ng-repeat="badgeInfo in badges">
+                <div class="col-xs-12 badge-title">Badge:</div>
+                <div class="row row-border">
+                    <div class="col-xs-12 col-sm-6 div-spacing">First Name: {{badgeInfo.fName}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Last Name: {{badgeInfo.lName}}</div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12 col-sm-6 div-spacing">Email: {{badgeInfo.eml}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Place of Birth: {{badgeInfo.birthPlace}}</div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12 col-sm-6 div-spacing">Phone: {{badgeInfo.phone}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Favorite Food: {{badgeInfo.food}}</div>
+                </div>
+                <div class="row row-border">
+                    <div class="col-xs-12">
+                        <div class="fill-width about-border">{{badgeInfo.about}}</div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

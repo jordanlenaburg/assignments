@@ -1,0 +1,1 @@
+Getting used to using Angular from memory

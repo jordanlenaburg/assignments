@@ -1,0 +1,1 @@
+Exercise to solidify teaching of NG-Model

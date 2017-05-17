@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NG Model</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainController">
+    <div class="row">
+        <div class="well col-xs-12 col-sm-4">
+            <input type="text" ng-model="repeat1">
+            <h1>{{repeat1}}</h1>
+        </div>
+        <div class="well col-xs-12 col-sm-4">
+            <input type="text" ng-model="repeat2">
+            <h3>{{repeat2}}</h3>
+        </div>
+        <div class="well col-xs-12 col-sm-4">
+            <input type="text" ng-model="repeat3">
+            <h5>{{repeat3}}</h5>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
