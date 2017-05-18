@@ -35,3 +35,8 @@
 textarea {
     resize: none;
 }
+
+input.ng-invalid,
+textarea.ng-invalid {
+    background-color: pink;
+}

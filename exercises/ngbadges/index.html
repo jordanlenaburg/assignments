@@ -23,7 +23,7 @@
                     <div class="col-xs-12 col-sm-6 div-spacing"><input type="text" placeholder="Place of Birth" class="fill-width" ng-model="obj.birthPlace" required ng-minlength="3"></div>
                 </div>
                 <div class="row row-border">
-                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="number" placeholder="Phone" class="fill-width" ng-model="obj.phone" ng-minlength="3"></div>
+                    <div class="col-xs-12 col-sm-6 div-spacing"><input type="number" placeholder="Phone" class="fill-width" ng-model="obj.phone" required ng-minlength="3"></div>
                     <div class="col-xs-12 col-sm-6 div-spacing"><input type="text" placeholder="Favorite Food" class="fill-width" ng-model="obj.food" required ng-minlength="3"></div>
                 </div>
                 <div class="row row-border">
@@ -33,7 +33,6 @@
                 </div>
                 <div class="row row-border">
                     <div class="col-xs-12 text-center div-spacing">
-                        <!--                        <input type="submit" class="btn submit" id="submit" value="Submit" />-->
                         <button class="btn submit" ng-click="fillBadge(obj)" ng-disabled="form.$invalid">Submit</button>
                     </div>
                     <br><br><br>
@@ -43,24 +42,24 @@
 
         <br>
         <br>
-        <div class="badge-border">
-            <div ng-repeat="badgeInfo in badges">
+        <div ng-repeat="singleEntry in badges">
+            <div class="badge-border">
                 <div class="col-xs-12 badge-title">Badge:</div>
                 <div class="row row-border">
-                    <div class="col-xs-12 col-sm-6 div-spacing">First Name: {{badgeInfo.fName}}</div>
-                    <div class="col-xs-12 col-sm-6 div-spacing">Last Name: {{badgeInfo.lName}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">First Name: {{singleEntry.fName}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Last Name: {{singleEntry.lName}}</div>
                 </div>
                 <div class="row row-border">
-                    <div class="col-xs-12 col-sm-6 div-spacing">Email: {{badgeInfo.eml}}</div>
-                    <div class="col-xs-12 col-sm-6 div-spacing">Place of Birth: {{badgeInfo.birthPlace}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Email: {{singleEntry.eml}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Place of Birth: {{singleEntry.birthPlace}}</div>
                 </div>
                 <div class="row row-border">
-                    <div class="col-xs-12 col-sm-6 div-spacing">Phone: {{badgeInfo.phone}}</div>
-                    <div class="col-xs-12 col-sm-6 div-spacing">Favorite Food: {{badgeInfo.food}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Phone: {{singleEntry.phone}}</div>
+                    <div class="col-xs-12 col-sm-6 div-spacing">Favorite Food: {{singleEntry.food}}</div>
                 </div>
                 <div class="row row-border">
                     <div class="col-xs-12">
-                        <div class="fill-width about-border">{{badgeInfo.about}}</div>
+                        <div class="fill-width about-border">{{singleEntry.about}}</div>
                     </div>
                 </div>
                 <br>

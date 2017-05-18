@@ -1,17 +1,24 @@
 var app = angular.module("myApp", []);
 
 app.controller("mainController", function ($scope) {
-
-    var badges = [];
+    $scope.badges = [];
+    $scope.obj = {};
 
     $scope.fillBadge = function (obj) {
-        $scope.badges.push(obj);
-        obj = {};
-        console.log(badges)
-        //        console.log($scope.badges);
-        //        return $scope.badgeInfo = obj;
+        var badgeInfo = {
+            fName: obj.fName,
+            lName: obj.lName,
+            eml: obj.eml,
+            birthPlace: obj.birthPlace,
+            phone: obj.phone,
+            food: obj.food,
+            about: obj.about
+        }
+        $scope.badges.push(badgeInfo)
+        $scope.obj = {}
+        console.log(obj);
+    }
+    function notValid () {
+        $scope.validity = "Please enter a valid name"
     }
 })
-
-
-//ng-repeat="info in badges"
