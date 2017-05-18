@@ -11,7 +11,7 @@
 <body>
     <div class="container-fluid">
         <header>
-            <div class="navbar-header">
+            <div class="navbar-header col-xs-12">
                 <div class="navbar-brand">
                     <img src="images/logo-h.png" />
                 </div>
@@ -20,7 +20,9 @@
                         <div class="form-group has-feedback">
                             <label class="control-label sr-only">Search</label>
                             <input type="text" class="form-control search-size" placeholder="Search">
-                            <i class="glyphicon glyphicon-search form-control-feedback text-muted"></i>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-search form-control-feedback text-muted"></i>
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -52,27 +54,27 @@
                 </div>
             </div>
         </header>
-
-
-
-
-
-
-
         <div class="head-image">
             <img class="img-responsive slideshow-1" src="images/DSC_0081.jpg" />
             <img class="img-responsive slideshow-2" src="images/DSC_0192.jpg" />
             <img class="img-responsive slideshow-3" src="images/skin1.jpg" />
             <img class="img-responsive slideshow-4" src="images/slider-pic3.jpg" />
-
         </div>
-
-
 
         <div id="subscribe-box">
-
+            <form role="form">
+                <div class="form-group has-feedback">
+                    <label class="control-label sr-only">Email</label>
+                    <input type="text" class="form-control email-size center-block" placeholder="Search">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-envelope form-control-feedback text-muted"></i>
+                    </a>
+                </div>
+            </form>
 
         </div>
+
+
 
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>

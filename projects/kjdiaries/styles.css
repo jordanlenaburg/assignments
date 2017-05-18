@@ -34,15 +34,14 @@ move to 1 per row stacked
 .head-image {
     position: relative;
     top: 150px;
-    background-color: rgba(252, 202, 178, 0.56);
     width: 100%;
+    margin-bottom: 150px;
     /*image is 100% width at 1466px and 100%height at 1466px. As width decreases, height does too, indicating it is height 95% of an element. as width increases height decreases at a faster ratio*/
 }
 
 #subscribe-box {
-    background-color: rgba(252, 202, 178, 0.56);
-    padding: 100px;
-    height: 100%
+    background-color: rgba(252, 201, 178, 0.56);
+    padding: 50px;
 }
 
 @keyframes slideshow {
@@ -69,10 +68,12 @@ move to 1 per row stacked
     animation-delay: 0s;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    /*
     position: absolute;
-    left: 0px;
-    top: 0px;
-    /*    z-index: 1;*/
+left: 0px;
+top: 0px;
+*/
+    z-index: 1;
 }
 
 .slideshow-2 {
@@ -84,7 +85,7 @@ move to 1 per row stacked
     position: absolute;
     left: 0px;
     top: 0px;
-    /*    z-index: 2;*/
+    z-index: 2;
 }
 
 .slideshow-3 {
@@ -96,7 +97,7 @@ move to 1 per row stacked
     position: absolute;
     left: 0px;
     top: 0px;
-    /*    z-index: 3;*/
+    z-index: 3;
 }
 
 .slideshow-4 {
@@ -108,12 +109,19 @@ move to 1 per row stacked
     position: absolute;
     left: 0px;
     top: 0px;
-    /*    z-index: 4;*/
+    z-index: 4;
 }
 
 .search-size {
     width: 150px;
     border-radius: 0px;
+    font-style: italic;
+}
+
+.email-size {
+    width: 250px;
+    border-radius: 0px;
+    font-style: italic;
 }
 
 .max-width {
