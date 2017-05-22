@@ -1,0 +1,20 @@
+body {
+    margin: auto;
+    background-image: url(images/background-images-for-websites-27.jpg);
+    background-position: center;
+}
+
+.hit-img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.repeater {
+    height: 300px;
+}
+
+@media (min-width: 1680px) {
+    body {
+        background-size: 100%;
+    }
+}

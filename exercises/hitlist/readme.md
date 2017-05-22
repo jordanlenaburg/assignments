@@ -1,0 +1,1 @@
+This exercise was to creat a simple get request with Angular

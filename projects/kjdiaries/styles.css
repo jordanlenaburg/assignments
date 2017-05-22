@@ -21,6 +21,11 @@ move to 1 per row stacked
 
 */
 
+body {
+    margin: auto;
+    max-width: 990px
+}
+
 .nav {
     padding: 15px;
 }
@@ -41,7 +46,10 @@ move to 1 per row stacked
 
 #subscribe-box {
     background-color: rgba(252, 201, 178, 0.56);
-    padding: 50px;
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 @keyframes slideshow {
@@ -68,11 +76,6 @@ move to 1 per row stacked
     animation-delay: 0s;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-    /*
-    position: absolute;
-left: 0px;
-top: 0px;
-*/
     z-index: 1;
 }
 
@@ -118,17 +121,170 @@ top: 0px;
     font-style: italic;
 }
 
+.read-more {
+    background-color: white;
+    color: #ccc;
+    border: solid #ccc 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    transition: all .5s;
+}
+
+.read-more:hover {
+    background-color: #888;
+    color: white;
+}
+
 .email-size {
-    width: 250px;
+    width: 180px;
     border-radius: 0px;
-    font-style: italic;
+    border: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 12px;
+    padding-left: 2px;
+    height: 20px;
+    font-weight: 200;
+}
+
+#comments {
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.glyph-email {
+    position: absolute;
+    right: -7px;
+    top: -6px;
 }
 
 .max-width {
     width: 100% !important;
 }
 
+#sidebar {
+    position: relative;
+    left: 60px;
+    top: 90px;
+}
 
-/*
-.dropdown:hover {}
-*/
+.outline-box {
+    border-color: #ddd;
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+.related::before,
+.related::after {
+    content: " ";
+    display: inline-block;
+    max-width: 180px;
+    width: 30%;
+    border-bottom: 1px solid #ddd;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.related-box {
+    border-color: #ddd;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 10px;
+}
+
+.box-header {
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    margin-top: -15px;
+}
+
+#myCarousel {
+    width: 140px;
+}
+
+.carousel-text {
+    text-shadow: 1px 1px 1px white;
+}
+
+.box-header::before,
+.box-header::after {
+    content: " ";
+    display: inline-block;
+    max-width: 180px;
+    width: 15%;
+    border-bottom: 1px solid #ddd;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.box-content {
+    font-weight: 300;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: rgb(252, 201, 178);
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+h2 {
+    color: #bbb;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+h3 {
+    color: #bbb;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.img-smallish {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 99px;
+    width: 100%;
+}
+
+.insta-image {
+    width: 10%;
+    position: relative;
+    float: left;
+    max-height: 99px;
+    overflow: hidden;
+}
+
+.loadmore {
+    width: 225px;
+}
+
+h2::before,
+h2::after {
+    content: " ";
+    display: inline-block;
+    max-width: 80px;
+    width: 15%;
+    border-bottom: 1px solid #ddd;
+    line-height: 18px;
+    vertical-align: middle;
+}

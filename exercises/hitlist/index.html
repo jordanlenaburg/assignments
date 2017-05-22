@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hit List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="myCtrl">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div>
+
+                <h2>Hit-list</h2>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="" ng-repeat="target in hitList">
+
+                <div class="col-sm-4 col-xs-6 repeater">
+
+                    <div class="thumbnail">
+
+                        <img src="{{target.image}}" class="hit-img img-rounded img-responsive">
+
+                        <div class="caption text-center">
+
+                            {{target.name}}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

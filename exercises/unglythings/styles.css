@@ -1,0 +1,22 @@
+body {
+    margin: auto;
+}
+
+.no-resize {
+    resize: none;
+}
+
+.results {
+    margin: auto;
+    width: 33%;
+    float: left;
+}
+
+.ugly-image {
+    width: 100%;
+}
+
+.form {
+    margin: auto;
+    width: 150px;
+}

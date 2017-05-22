@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="myCtrl">
+    <div class="form">
+        <form>
+            <input type="text" placeholder="Title" ng-model="post.title" required><br>
+            <input type="url" placeholder="URL of Image" ng-model="post.url" required><br>
+            <textarea rows="3" class="no-resize" placeholder="Why is this ugly?" ng-model="post.desc" required></textarea><br>
+
+            <button ng-click="submit(post)">Submit</button>
+        </form>
+    </div>
+    <div class="results" ng-repeat="singlePost in allPosts">
+        <div class="title">
+            <h1>{{singlePost.title}}</h1>
+        </div>
+        <div class="post-image"><img class="ugly-image" src="{{singlePost.url}}"></div>
+        <div class="desc">Why it's ugly: {{singlePost.desc}}</div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

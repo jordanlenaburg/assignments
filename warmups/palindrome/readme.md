@@ -1,0 +1,1 @@
+Warmup to fin if a given string is a palindrome, ignoring non-letter characters.

@@ -1,0 +1,1 @@
+This exercise was to practice using Angular Methods

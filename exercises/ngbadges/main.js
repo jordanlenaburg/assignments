@@ -18,7 +18,4 @@ app.controller("mainController", function ($scope) {
         $scope.obj = {}
         console.log(obj);
     }
-    function notValid () {
-        $scope.validity = "Please enter a valid name"
-    }
 })
