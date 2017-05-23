@@ -1,0 +1,77 @@
+body {
+    background-image: url("images/stars.png")
+}
+
+.crawl {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    border: 2px solid white;
+    height: 50px;
+    top: 100%;
+    overflow: hidden;
+    z-index: -1;
+    animation-name: text-crawl;
+    animation-duration: 30s;
+    animation-fill-mode: backwards;
+    perspective: 30px;
+}
+
+
+/*
+.content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+        background-color: red;
+    transform: rotateX(45deg);
+}
+*/
+
+#button {
+    opacity: 1;
+    transition-timing-function: linear;
+    transition-duration: 10s;
+    transition-delay: .5s;
+}
+
+
+/*
+#buttons:target {
+    opacity: 0;
+    transition-duration: 10s;
+    transition-delay: .5s;
+}
+*/
+
+@keyframes text-crawl {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -300%;
+        /*        transform: scale(0.1, 1)*/
+    }
+}
+
+p {
+    font-size: 45px;
+    color: yellow;
+    text-align: center;
+}
+
+h3 {
+    font-family: arial;
+    font-weight: 300;
+    color: white;
+}
+
+button {
+    border-radius: 5px;
+    border: collapse;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}

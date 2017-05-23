@@ -1,0 +1,1 @@
+This warmup is to exercise our memory for setting up an Angular controller

@@ -20,19 +20,19 @@
                     Title:
                 </div>
                 <div class="col-xs-2 col-md-2 text-left">
-                    <input type="text" id="title" ng-model="newTodo.title" placeholder="Bounty Title">
+                    <input type="text" id="title" ng-model="title" placeholder="Bounty Title">
                 </div>
                 <div class="col-xs-2 col-md-2 text-right">
                     Description:
                 </div>
                 <div class="col-xs-2 col-md-2 text-left">
-                    <input type="text" class="align-left" id="desc" ng-model="newTodo.description" placeholder="What needs done?" required>
+                    <input type="text" class="align-left" id="desc" ng-model="description" placeholder="What needs done?" required>
                 </div>
                 <div class="col-xs-2 col-md-2 text-right">
                     Price:
                 </div>
                 <div class="col-xs-2 col-md-2 text-left">
-                    <input type="number" class="smaller" id="price" ng-model="newTodo.price" placeholder="Price" required>
+                    <input type="number" class="smaller" id="price" ng-model="price" placeholder="Price">
                 </div>
             </div>
             <div class="row align-justify">
@@ -40,21 +40,21 @@
                     Image:
                 </div>
                 <div class="col-xs-2 col-md-2 text-left">
-                    <input type="url" id="img-url" ng-model="newTodo.imgUrl" placeholder="Image URL of Bounty">
+                    <input type="url" id="img-url" ng-model="imgUrl" placeholder="Image URL of Bounty">
                 </div>
                 <div class="col-xs-2 col-md-2 text-right">
                     Completed?
                 </div>
                 <div class="col-xs-2 col-md-2 text-left">
                     No
-                    <input type="radio" name="radio" ng-value="false" ng-model="newTodo.completed" checked> Yes
-                    <input type="radio" name="radio" ng-value="true" ng-model="newTodo.completed">
+                    <input type="radio" name="radio" ng-value="false" ng-model="completed" checked> Yes
+                    <input type="radio" name="radio" ng-value="true" ng-model="completed">
                 </div>
                 <div class="col-xs-2 col-md-2 text-right">
                     Bounty ID:
                 </div>
                 <div class="col-xs-2 col-md-2 text-left">
-                    <input type="text" class="smaller" id="bounty-id" placeholder="Bounty ID" ng-model="newTodo.id" disabled>
+                    <input type="text" class="smaller" id="bounty-id" placeholder="Bounty ID" ng-model="_id" disabled>
                     <br>
                 </div>
             </div>
@@ -88,20 +88,20 @@
                     <th class="table-desc">Description</th>
                     <th class="table-price">Price</th>
                     <th class="table-img">Image</th>
-                    <th class="table-status">Status</th>
+                    <th class="table-status">Completed</th>
                     <th class="table-id">Bounty ID</th>
                 </tr>
 
-                <tr ng-repeat="singleBounty in bountyList">
-                    <td class="table-check"><input type="radio" class="deleter" name="deleter"></td>
-                    <td class="table-title ">{{singleBounty.title}}</td>
-                    <td class="table-desc ">{{singleBounty.description}}</td>
-                    <td class="center table-price ">{{singleBounty.price}}</td>
-                    <td class="center table-img ">
+                <tr ng-repeat="singleBounty in bountyList track by $index"  >
+                    <td class="table-check"><input type="radio" class="deleter" name="deleter" ng-click="selectToDo($index)"></td>
+                    <td class="table-title" ng-class="{'completedStyle': singleBounty.completed}">{{singleBounty.title}}</td>
+                    <td class="table-desc" ng-class="{'completedStyle': singleBounty.completed}">{{singleBounty.description}}</td>
+                    <td class="center table-price" ng-class="{'completedStyle': singleBounty.completed}">{{singleBounty.price}}</td>
+                    <td class="center table-img" ng-class="{'completedStyle': singleBounty.completed}">
                         <a href="{{singleBounty.imgUrl}}" target="_blank"><img class="small-img" src="{{singleBounty.imgUrl}}" /></a>
                     </td>
-                    <td class="center table-status ">{{singleBounty.completed}}</td>
-                    <td class="table-id ">{{singleBounty.id}}</td>
+                    <td class="center table-status" ng-class="{'completedStyle': singleBounty.completed}">{{singleBounty.completed}}</td>
+                    <td class="table-id" ng-class="{'completedStyle': singleBounty.completed}">{{singleBounty._id}}</td>
                 </tr>
 
             </table>

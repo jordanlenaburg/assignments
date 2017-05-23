@@ -6,33 +6,58 @@ app.controller("mainCtrl", ["$scope", "$httpService", function ($scope, $httpSer
 
     var url = "https://api.vschool.io/jordanlenaburg/todo";
 
-    $scope.bountyList = []
+    $scope.bountyList = [];
+    $scope.newTodo = {};
+    $scope.bountyId;
 
-    $scope.newTodo = {
-        title: $("#title").val(), // this one is the only thing that is actually required
-        description: $("#desc").val(),
-        price: $("#price").val(), // Must be a number of some kind (integer or float)
-        imgUrl: $("#img-url").val(),
-        completed: $("#completed").val(), // must be a boolean (true or false). If nothing provided, defaults to false.
-        id: $("#bounty-id").val()
+    $scope.setVar = function () {
+        $scope.newTodo = {
+            //functional!
+            title: $scope.title,
+            description: $scope.description,
+            price: $scope.price,
+            imgUrl: $scope.imgUrl,
+            completed: $scope.completed,
+            id: $scope._id
+        };
+        $scope.bountyId = $scope._id;
     };
 
+    $scope.selectToDo = function ($index) {
+        //functional!
+        $scope.title = $scope.bountyList[$index].title;
+        $scope.description = $scope.bountyList[$index].description;
+        $scope.price = $scope.bountyList[$index].price;
+        $scope.imgUrl = $scope.bountyList[$index].imgUrl;
+        $scope.completed = $scope.bountyList[$index].completed;
+        $scope._id = $scope.bountyList[$index]._id;
+    }
+
+    $scope.clearToDo = function () {
+        $scope.title = "";
+        $scope.description = "";
+        $scope.price = "";
+        $scope.imgUrl = "";
+        $scope.completed = "";
+        $scope._id = "";
+    }
+
     $scope.getList = function () {
-        console.log("getting into the function")
-        //        var url = "https://api.vschool.io/jordanlenaburg/todo";
+        //functional!
         $httpService.getRequest().then(
             function (serviceResponse) {
                 $scope.bountyList = serviceResponse;
-                console.log(serviceResponse)
             },
             function (serviceResponse) {
                 console.log(serviceResponse);
             }
-        )
+        );
+        $scope.clearToDo();
     };
 
     $scope.addToList = function (newTodo) {
-        //        var url = "https://api.vschool.io/jordanlenaburg/todo";
+        //functional!
+        $scope.setVar();
         $httpService.postRequest(newTodo).then(
             function (serviceResponse) {
                 setTimeout($scope.getList(url), 1000);
@@ -44,8 +69,9 @@ app.controller("mainCtrl", ["$scope", "$httpService", function ($scope, $httpSer
     };
 
     $scope.updateToDo = function (newTodo) {
-        //        var url = "https://api.vschool.io/jordanlenaburg/todo";
-        $httpService.putRequest(newTodo).then(
+        //functional!
+        $scope.setVar();
+        $httpService.putRequest($scope.bountyId, $scope.newTodo).then(
             function (serviceResponse) {
                 setTimeout($scope.getList(url), 1000)
             },
@@ -56,8 +82,9 @@ app.controller("mainCtrl", ["$scope", "$httpService", function ($scope, $httpSer
     };
 
     $scope.delToDo = function () {
-        //        var url = "https://api.vschool.io/jordanlenaburg/todo";
-        $httpService.deleteRequest().then(
+        //functional!
+        $scope.setVar();
+        $httpService.deleteRequest($scope.bountyId).then(
             function (serviceResponse) {
                 setTimeout($scope.getList(url), 1000)
             },
@@ -70,13 +97,11 @@ app.controller("mainCtrl", ["$scope", "$httpService", function ($scope, $httpSer
 
 app.service("$httpService", ["$http", function ($http) {
 
-    var url = "https://api.vschool.io/jordanlenaburg/todo";
+    var url = "https://api.vschool.io/jordanlenaburg/todo/";
 
     this.getRequest = function () {
-        console.log("1 " + url)
         return $http.get(url).then(
             function (serverResponse) {
-                console.log("2 " + serverResponse.data)
                 return (serverResponse.data);
             },
             function (serverResponse) {
@@ -86,7 +111,7 @@ app.service("$httpService", ["$http", function ($http) {
         )
     };
 
-    this.postRequest = function () {
+    this.postRequest = function (objToPost) {
         return $http.post(url, objToPost).then(
             function (serverResponse) {
                 return (serverResponse.data);
@@ -98,7 +123,7 @@ app.service("$httpService", ["$http", function ($http) {
         )
     };
 
-    this.putRequest = function () {
+    this.putRequest = function (bountyId, objToPost) {
         return $http.put(url + bountyId, objToPost).then(
             function (serverResponse) {
                 return (serverResponse.data);
@@ -110,7 +135,7 @@ app.service("$httpService", ["$http", function ($http) {
         )
     };
 
-    this.deleteRequest = function () {
+    this.deleteRequest = function (bountyId) {
         return $http.delete(url + bountyId).then(
             function (serverResponse) {
                 return (serverResponse.data);

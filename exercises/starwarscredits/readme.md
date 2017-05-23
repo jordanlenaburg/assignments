@@ -1,0 +1,1 @@
+This warmup is to practice using $http service of Angular by mimicing the Star Wars opening crawl.

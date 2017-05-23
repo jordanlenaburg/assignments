@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainCtrl">
+    <div id="buttons" class="center disappear">
+        <h3>Please choose the episode</h3>
+        <a href="#buttons" ng-click="displayCrawl(4)">Episode 1</a>
+        <a href="#buttons" ng-click="displayCrawl(5)">Episode 2</a>
+        <a href="#buttons" ng-click="displayCrawl(6)">Episode 3</a>
+        <a href="#buttons" ng-click="displayCrawl(1)">Episode 4</a>
+        <a href="#buttons" ng-click="displayCrawl(2)">Episode 5</a>
+        <a href="#buttons" ng-click="displayCrawl(3)">Episode 6</a>
+        <a href="#buttons" ng-click="displayCrawl(7)">Episode 7</a>
+    </div>
+    <div class="crawl">
+        <!--
+        <p class="content">{{filmEpisode}}</p>
+        <p class="content">{{filmTitle}}</p>
+-->
+        <div class="content">
+            <p ng-repeat="paragraph in filmCrawl track by $index">
+                {{paragraph}}
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

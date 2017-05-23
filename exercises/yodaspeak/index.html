@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yoda Translator</title>
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <h1>Yoda Speak</h1>
+    <input type="text" placeholder="Type your sentence here, you must" size="50" ng-model="originalSentence">
+    <button ng-click="translatePhrase(originalSentence)">Translate, this will</button>
+
+    <h2>{{phraseThisIs}}</h2>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

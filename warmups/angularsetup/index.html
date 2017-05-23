@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Set Up</title>
+</head>
+
+<body>
+    <div id="sum" ng-controller="sumCtrl">
+        <h1>Input 1</h1>
+        <input type="number" placeholder="Number 1" ng-model="sum1">
+        <h1>Input 2</h1>
+        <input type="number" placeholder="Number 2" ng-model="sum2">
+        <button ng-click="makeSum(sum1, sum2)">Add 'em up</button>
+        <h2>Sum</h2>
+        <span id="summation">{{totalSum}}</span>
+    </div>
+
+    <div id="product" ng-controller="prodCtrl">
+        <h1>Input 1</h1>
+        <input type="number" placeholder="Number 1" ng-model="prod1">
+        <h1>Input 2</h1>
+        <input type="number" placeholder="Number 2" ng-model="prod2">
+        <button ng-click="makeProd(prod1, prod2)">Multiply!</button>
+        <h2>Product</h2>
+        <span id="productation">{{totalProd}}</span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -76,3 +76,7 @@ td {
 .table-id {
     width: 15%;
 }
+
+.completedStyle {
+    text-decoration: line-through;
+}

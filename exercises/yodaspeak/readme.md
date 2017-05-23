@@ -1,0 +1,1 @@
+This exercise is to get used to using the $http service in Angular via the Yoda Speak API
