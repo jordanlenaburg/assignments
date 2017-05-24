@@ -10,20 +10,20 @@
 <body ng-controller="mainCtrl">
     <div id="buttons" class="center disappear">
         <h3>Please choose the episode</h3>
-        <a href="#buttons" ng-click="displayCrawl(4)">Episode 1</a>
-        <a href="#buttons" ng-click="displayCrawl(5)">Episode 2</a>
-        <a href="#buttons" ng-click="displayCrawl(6)">Episode 3</a>
-        <a href="#buttons" ng-click="displayCrawl(1)">Episode 4</a>
-        <a href="#buttons" ng-click="displayCrawl(2)">Episode 5</a>
-        <a href="#buttons" ng-click="displayCrawl(3)">Episode 6</a>
-        <a href="#buttons" ng-click="displayCrawl(7)">Episode 7</a>
+        <a href="#content" ng-click="displayCrawl(4)">Episode 1</a>
+        <a href="#content" ng-click="displayCrawl(5)">Episode 2</a>
+        <a href="#content" ng-click="displayCrawl(6)">Episode 3</a>
+        <a href="#content" ng-click="displayCrawl(1)">Episode 4</a>
+        <a href="#content" ng-click="displayCrawl(2)">Episode 5</a>
+        <a href="#content" ng-click="displayCrawl(3)">Episode 6</a>
+        <a href="#content" ng-click="displayCrawl(7)">Episode 7</a>
     </div>
     <div class="crawl">
         <!--
         <p class="content">{{filmEpisode}}</p>
         <p class="content">{{filmTitle}}</p>
 -->
-        <div class="content">
+        <div ng-class="{'content': 'isStyled'}">
             <p ng-repeat="paragraph in filmCrawl track by $index">
                 {{paragraph}}
             </p>

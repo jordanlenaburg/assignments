@@ -1,0 +1,1 @@
+This exercise it to create an Angular webpage which uses multiple controllers accessed through ngRoute. I optionally included information from two different API's through $http services

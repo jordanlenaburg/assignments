@@ -92,6 +92,7 @@ function scoreSubmit() {
         scoreRow.talk + `</td>
         </tr>`);
     sorty.push(scoreRow);
+    localStorage.setItem("sorty", JSON.stringify(sorty));
 }
 
 function rearrange(type) {
@@ -120,6 +121,28 @@ function rearrange(type) {
                 <td class="talk">` +
             sorty[i].talk + `</td>
         </tr>`)
+    }
+}
+
+function displayList() {
+    if (localStorage.getItem("sorty") !== null) {
+        sorty = JSON.parse(localStorage.getItem("sorty"));
+        $("#score-list").empty();
+        for (var i = 0; i < sorty.length; i++) {
+            $("#score-list").append(`       
+        <tr class="info">
+                 <td class="name">` +
+                sorty[i].name + `</td>
+                <td class="game">` +
+                sorty[i].game + `</td>
+                <td class="date">` +
+                sorty[i].date + `</td>
+                <td class="score">` +
+                sorty[i].score + `</td>
+                <td class="talk">` +
+                sorty[i].talk + `</td>
+        </tr>`)
+        }
     }
 }
 

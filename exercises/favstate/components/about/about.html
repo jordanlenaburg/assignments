@@ -1,0 +1,24 @@
+<div class="container-fluid" ng-controller="aboutCtrl">
+
+    <div class="row">
+
+        <section class="col-xs-12">
+
+            <h1>About Denmark</h1>
+
+            <h5>Statistics courtesy of: <a href="http://www.dst.dk/en/" target="_blank">{{ population.source }}</a></h5>
+
+            <about>
+
+                <p>Current population: {{ population.value[0] }}</p>
+                <p>Population updated as of: {{ population.popUpdated }}</p>
+
+                <p>{{ countryInfo }}</p>
+
+            </about>
+
+        </section>
+
+    </div>
+
+</div>

@@ -57,7 +57,7 @@ app.controller('mainController', ['$scope', 'httpService', function ($scope, htt
             },
             function (response) {
                 //do stuff with error response.status
-            }));
+            });
 
     $scope.info;
     $scope.postInfo = function ()

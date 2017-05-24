@@ -5,6 +5,7 @@ app.controller("mainCtrl", ["$scope", "starWarsService", function ($scope, starW
     $scope.filmTitle = "";
     $scope.filmEpisode = "";
     $scope.filmCrawl = [];
+    $scope.isStyled = false;
 
     $scope.displayCrawl = function (film) {
         starWarsService.getRequest(film).then(
@@ -29,6 +30,11 @@ app.controller("mainCtrl", ["$scope", "starWarsService", function ($scope, starW
                 $scope.filmCrawl.splice(0, 0, $scope.filmTitle);
                 $scope.filmCrawl.splice(0, 0, $scope.filmEpisode);
                 console.log($scope.filmCrawl)
+                $scope.isStyled = !$scope.isStyled;
+                setTimeout(function () {
+                    $scope.isStyled = !$scope.isStyled
+                }, 90000);
+
             },
             function (data) {
                 console.log(data);
