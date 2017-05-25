@@ -1,0 +1,17 @@
+body {
+    margin: auto;
+}
+
+.rounded {
+    border-radius: 25px !important;
+}
+
+.red-button {
+    float: left;
+    margin-left: 150px;
+}
+
+.blue-button {
+    float: right;
+    margin-right: 150px;
+}

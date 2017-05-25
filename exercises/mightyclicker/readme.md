@@ -1,0 +1,1 @@
+This exercise was to create a button which increased one value and decreased another. The exercise was designed to get us used to using angular services.

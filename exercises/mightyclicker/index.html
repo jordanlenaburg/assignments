@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mighty Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <div class="container-fluid text-center">
+        <h1>Red or Blue?</h1>
+        <div class="blue-button">
+            <input type="button" class="btn btn-info rounded" value="Blue" ng-click="blueButton()">
+            <p>Score: {{ blue }}</p>
+        </div>
+        <div class="red-button">
+            <input type="button" class="btn btn-danger rounded" value="Red" ng-click="redButton()">
+            <p>Score: {{ red }}</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!--JS Libraries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+
+    <!--App-->
+    <script src="app.js"></script>
+
+    <!--Services-->
+    <script src="services/blueService.js"></script>
+    <script src="services/redService.js"></script>
+
+
+</body>
+
+</html>
