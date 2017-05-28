@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moar Service!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <section class="container header-pleasing-color">
+        <br>
+        <form id="input">
+            <div class="row">
+                <div class="col-xs-4 text-center"><input type="text" required ng-model="cartoonInput.title" placeholder="Please enter image title"></div>
+                <div class="col-xs-4 text-center"><input type="text" required ng-model="cartoonInput.desc" placeholder="Please enter image description"></div>
+                <div class="col-xs-4 text-center"><input type="url" required ng-model="cartoonInput.url" placeholder="Please enter image url"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-12 text-center"><button type="button" class="btn btn-info" ng-click="add(cartoonInput)">Submit</button></div>
+            </div>
+            <br>
+            <div class="row content-pleasing-color" ng-repeat="toon in cartoonList track by $index">
+                <div class="col-xs-4 text-center">{{ toon.title }}</div>
+                <div class="col-xs-4 text-center">{{ toon.desc }}</div>
+                <div class="col-xs-4 text-center"><img class="smallish" src="{{ toon.url }}"></div>
+                <br>
+            </div>
+        </form>
+    </section>
+
+
+    <!--Libraries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+
+    <!--App-->
+    <script src="app.js"></script>
+
+    <!--Services-->
+    <script src="addCartoon.js"></script>
+
+</body>
+
+</html>

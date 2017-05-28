@@ -1,0 +1,1 @@
+Front-end app using api's and Angular. Allows downloading of mp3 files from youtube links, and searches for metadata and lyrics. Things I learned: asynchronous operations setting synchronous variables is tricky; accessing anonymous objects can be done with ng-repeat, but normal JS methods must have the variable assigned to something specific.

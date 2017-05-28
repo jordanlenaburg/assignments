@@ -1,13 +1,14 @@
 body {
     margin: auto;
     /*    background-color: linear-gradient(to right, red, yellow);*/
-    background-image: url(images/angular.png), linear-gradient(to bottom right, firebrick, gray);
-    width: 100%;
+    background-image: url(images/angular.png),
+    linear-gradient(to bottom right, firebrick, gray);
     background-attachment: fixed;
     background-position: bottom right;
     bottom: 0px;
     right: 0px;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 table {

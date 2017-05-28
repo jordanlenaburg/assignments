@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+    <title>Fav Pokes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+
+<body ng-controller="mainCtrl">
+    <div class="container" id="results">
+        <h1>Fav Pokemon</h1>
+        <div class="row">
+            <div class="col-xs-4"><input type="text" placeholder="Pokemon Name" ng-model="pokeName"></div>
+            <div class="col-xs-4 text-center"><input type="button" value="Add" class="btn btn-success" ng-click="add(pokeName)"></div>
+            <div class="col-xs-4 text-center"><input type="button" value="Delete" class="btn btn-danger" ng-click="delete(pokeName)"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li ng-repeat="pokemon in favList">
+                        <a href="https://www.google.com/#q={{pokemon}}" target="_blank">{{ pokemon }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Libraries-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+
+
+    <!--App-->
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

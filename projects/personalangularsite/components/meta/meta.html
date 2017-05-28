@@ -1,0 +1,29 @@
+<div class="container">
+    <section class="row">
+        <div class="col-sm-12">
+            <h3 class="text-center">Here are {{ metaList.length }} possible options for meta data for your song.</h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <h4>Artist Name</h4>
+            </div>
+            <div class="col-xs-4">
+                <h4>Album Name</h4>
+            </div>
+            <div class="col-xs-4">
+                <h4>Song Name</h4>
+            </div>
+        </div>
+        <div class="row flexor" ng-repeat="meta in metaList">
+            <div class="col-xs-4 content-strech">
+                <p>{{ meta.artist_name }}</p>
+            </div>
+            <div class="col-xs-4 content-strech">
+                <p>{{ meta.album_name }}</p>
+            </div>
+            <div class="col-xs-4 content-strech">
+                <p>{{ meta.track_name }}</p>
+            </div>
+        </div>
+    </section>
+</div>
