@@ -11,15 +11,15 @@
 <body ng-controller="indexCtrl">
     <nav class="navbar-inverse">
         <ul class="nav nav-pills nav-justified">
-            <li role="presentation"><a href="#!/home">Download</a></li>
-            <li role="presentation"><a href="#!/video">Preview</a></li>
-            <li role="presentation"><a href="#!/lyrics">Lyrics</a></li>
-            <li role="presentation"><a href="#!/meta">Metadata</a></li>
+            <li role="presentation"><a href ng-click="linkTo('#!/home', '#home', '.otherstuff')">Download</a></li>
+            <li role="presentation"><a href ng-click="linkTo('#!/video', '#video', '.otherstuff')">Preview</a></li>
+            <li role="presentation"><a href ng-click="linkTo('#!/lyrics', '#lyrics', '.otherstuff')">Lyrics</a></li>
+            <li role="presentation"><a href ng-click="linkTo('#!/meta', '#meta', '.otherstuff')">Metadata</a></li>
         </ul>
     </nav>
-<br>
+    <br>
 
-<section class="row">
+    <section class="row">
         <form>
             <div class="col-sm-4 text-center">
                 <input class="text" placeholder="Song Name" ng-model="song" required>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Why I love</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!--    Header section     -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand"><img class="icon" src="/images/flag.png" /></a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation"><a href="#/home">Home</a></li>
+                    <li role="presentation"><a href="#/about">About</a></li>
+                    <li role="presentation"><a href="#/whyilove">Why I love</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--    Main view section    -->
+
+    <ng-view></ng-view>
+
+    <!--    Footer section     -->
+
+    <!--    JS Libraries    -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--    App     -->
+    <script src="app.js"></script>
+
+    <!--    Services     -->
+    <script src="services/populationService.js"></script>
+    <script src="services/countryInfoService.js"></script>
+
+    <!--    Components     -->
+    <script src="components/about/about.js"></script>
+    <script src="components/whyilove/whyilove.js"></script>
+
+
+</body>
+
+</html>

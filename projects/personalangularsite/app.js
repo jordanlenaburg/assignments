@@ -1,4 +1,4 @@
-var app = angular.module("mainApp", ["ngRoute"])
+var app = angular.module("mainApp", ["ngRoute", "ngAnimate"])
 
 app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService", function ($scope, downloadBySearchService, lyricsService) {
 
@@ -8,14 +8,40 @@ app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService
     $scope.trackInfo = {};
     $scope.trackObj;
     $scope.metaList;
+    $scope.isClass;
+
+    $scope.linkTo = function (url, inElement, outClass) {
+
+        addClassOut(outClass);
+        setTimeout(function () {
+            window.location = url;
+            addClassIn(inElement);
+        }, 1500);
+
+
+    };
+
+    function addClassIn(inElement) {
+        $(inElement).removeClass("fade-out");
+        $(inElement).addClass("fade-in");
+    };
+
+    function addClassOut(outClass) {
+        $(outClass).addClass("fade-out");
+    }
+
+    function removeClass(element) {
+
+    }
+
 
     function setPhrase() {
         if ($scope.downloadLink === null) {
             return;
         } else {
             $scope.downloadPhrase = "Match found! Click here to download!"
-        }
-    }
+        };
+    };
 
     $scope.submitName = function (song, artist) {
         downloadBySearchService.getRequest(song + " " + artist)
@@ -27,7 +53,7 @@ app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService
                     setPhrase();
                     return data;
                 })
-    }
+    };
 
     $scope.submitLyrics = function (song, artist) {
         $scope.submitName(song, artist);
@@ -45,9 +71,9 @@ app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService
                                 //                                console.log($scope.trackObj);
                             })
                 })
-    }
+    };
 
-}])
+}]);
 
 app.config(["$routeProvider", "$sceDelegateProvider", function ($routeProvider, $sceDelegateProvider) {
     $routeProvider
@@ -73,4 +99,4 @@ app.config(["$routeProvider", "$sceDelegateProvider", function ($routeProvider, 
         // Allow loading for YouTube iFrame.
         'https://www.youtube.com/embed/**'
         ]);
-}])
+}]);
