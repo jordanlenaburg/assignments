@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body ng-controller="mainCtrl">
+    <h3>Part 1</h3>
+    <div ng-repeat="temp in temps">
+
+        <p>
+            {{ temp | temperature: display: 2 }}
+        </p>
+
+    </div>
+
+    <h3>Part 2</h3>
+    <div>
+
+        <input class="number" ng-model="lat" placeholder="Lattitude">
+        <input class="number" ng-model="lon" placeholder="Longitude">
+        <button ng-click="getWeather(lat, lon)">Get Current Weather</button>
+        <br>
+        <p>Salt Lake City: 40.758701, -111.876183</p>
+        <br>
+        <select ng-model="display" ng-options="item for item in displays">
+        </select>
+
+        <br><br>
+
+        <h3>Currently: {{ currentWeather.summary }}</h3>
+        <h3>Temp: {{ currentWeather.temperature | temperature: display: 2 }}</h3>
+
+    </div>
+
+
+    <!--libraries-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+
+    <!--app-->
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
