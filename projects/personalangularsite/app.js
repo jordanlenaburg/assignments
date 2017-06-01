@@ -1,4 +1,4 @@
-var app = angular.module("mainApp", ["ngRoute", "ngAnimate"])
+var app = angular.module("mainApp", ["ngRoute"])
 
 app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService", function ($scope, downloadBySearchService, lyricsService) {
 
@@ -17,8 +17,6 @@ app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService
             window.location = url;
             addClassIn(inElement);
         }, 1500);
-
-
     };
 
     function addClassIn(inElement) {
@@ -28,10 +26,6 @@ app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService
 
     function addClassOut(outClass) {
         $(outClass).addClass("fade-out");
-    }
-
-    function removeClass(element) {
-
     }
 
 
@@ -63,13 +57,13 @@ app.controller("indexCtrl", ["$scope", "downloadBySearchService", "lyricsService
                     $scope.trackInfo = trackData[1];
                     $scope.metaList = trackData[2];
                     console.log(trackData[2])
-                    lyricsService.getLyricRequest(trackData[0])
-                        .then(
-                            function (lyricData) {
-                                $scope.trackObj = lyricData;
-                                //                                console.log($scope.trackInfo);
-                                //                                console.log($scope.trackObj);
-                            })
+                    return lyricsService.getLyricRequest(trackData[0])
+                })
+            .then(
+                function (lyricData) {
+                    $scope.trackObj = lyricData;
+                    //                                console.log($scope.trackInfo);
+                    //                                console.log($scope.trackObj);
                 })
     };
 

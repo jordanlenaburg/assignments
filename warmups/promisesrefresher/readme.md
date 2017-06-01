@@ -1,0 +1,1 @@
+Warmup to solidify using $http and promises

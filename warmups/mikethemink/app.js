@@ -1,8 +1,5 @@
 var app = angular.module("mainApp", ["ngRoute"]);
 
-
-
-
 app.config(["$routeProvider", function ($routeProvider) {
 
     $routeProvider
@@ -30,4 +27,3 @@ app.directive("mikeTheMink", function () {
         restrict: "E",
     };
 });
-
