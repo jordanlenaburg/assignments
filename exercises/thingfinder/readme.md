@@ -1,0 +1,1 @@
+This exercise is to get used to passing parameters through requests
