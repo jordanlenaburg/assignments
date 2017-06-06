@@ -1,12 +1,16 @@
 var express = require("express");
-var bodyParser = require("body-parser");
 var app = express();
-app.use(bodyParser.json);
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.listen(8000, function () {
+    console.log("The server is listening on port 8000")
+})
 
-app.get("/", require("middleware"))
+app.get("/", require("./middleware"))
 
 app.get("/", function (req, res) {
 
-    console.log("I'm the GET function")
+    console.log(req.stuff);
+    console.log("I'm the GET function");
 
 })

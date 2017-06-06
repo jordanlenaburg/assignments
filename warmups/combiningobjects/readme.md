@@ -1,0 +1,1 @@
+This warmup is to match the contents of a property in objects in an array
