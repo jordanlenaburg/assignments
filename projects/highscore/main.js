@@ -53,18 +53,18 @@ function scoreSubmit() {
     }
     if ($("#time-select").prop("checked") === true) {
         var min = $("#score-min").val()
-        var sec = $("#score-sec").val()
-        $("#score-list").append(`       
-        <tr class="info">
-                 <td>Jordan</td>
-                <td>` +
-            scoreRow.game + `</td>
-                <td>` +
-            scoreRow.date + `</td>
-                <td>` +
-            min + ":" + (parseInt(sec) + num) + `</td>
-                <td class ="red" >You'll never beat my score!</td>
-        </tr>`);
+        var sec = $("#score-sec").val();
+                $("#score-list").append(`       
+                <tr class="info">
+                         <td>Jordan</td>
+                        <td>` +
+                    scoreRow.game + `</td>
+                        <td>` +
+                    scoreRow.date + `</td>
+                        <td>` +
+                    min + ":" + (parseInt(sec) + num) + `</td>
+                        <td class ="red" >You'll never beat my score!</td>
+                </tr>`);
     } else {
         $("#score-list").append(`       
         <tr class="info">
@@ -77,20 +77,20 @@ function scoreSubmit() {
             (parseInt(scoreRow.score) + (num * 100 + num)) + `</td>
                 <td class ="red" >You'll never beat my score!</td>
         </tr>`);
-    }
-    $("#score-list").append(`       
-        <tr class="info">
-                 <td class="name">` +
-        scoreRow.name + `</td>
-                <td class="game">` +
-        scoreRow.game + `</td>
-                <td class="date">` +
-        scoreRow.date + `</td>
-                <td class="score">` +
-        scoreRow.score + `</td>
-                <td class="talk">` +
-        scoreRow.talk + `</td>
-        </tr>`);
+    };
+        $("#score-list").append(`       
+            <tr class="info">
+                     <td class="name">` +
+            scoreRow.name + `</td>
+                    <td class="game">` +
+            scoreRow.game + `</td>
+                    <td class="date">` +
+            scoreRow.date + `</td>
+                    <td class="score">` +
+            scoreRow.score + `</td>
+                    <td class="talk">` +
+            scoreRow.talk + `</td>
+            </tr>`);
     sorty.push(scoreRow);
     localStorage.setItem("sorty", JSON.stringify(sorty));
 }
@@ -145,124 +145,3 @@ function displayList() {
         }
     }
 }
-
-
-//function sortName() {
-//    function compare(a, b) {
-//        if (a.name < b.name) {
-//            return -1;
-//        } else if (a.name > b.name) {
-//            return 1;
-//        } else {
-//            return 0;
-//        }
-//    }
-//    sorty.sort(compare);
-//    $("#score-list").empty();
-//    for (var i = 0; i < sorty.length; i++) {
-//        $("#score-list").append(`       
-//        <tr class="info">
-//                 <td class="name">` +
-//            sorty[i].name + `</td>
-//                <td class="game">` +
-//            sorty[i].game + `</td>
-//                <td class="date">` +
-//            sorty[i].date + `</td>
-//                <td class="score">` +
-//            sorty[i].score + `</td>
-//                <td class="talk">` +
-//            sorty[i].talk + `</td>
-//        </tr>`)
-//    }
-//}
-//
-//function sortGame() {
-//    function compare(a, b) {
-//        if (a.game < b.game) {
-//            return -1;
-//        } else if (a.game > b.game) {
-//            return 1;
-//        } else {
-//            return 0;
-//        }
-//    }
-//    sorty.sort(compare);
-//    $("#score-list").empty();
-//    for (var i = 0; i < sorty.length; i++) {
-//        $("#score-list").append(`       
-//        <tr class="info">
-//                 <td class="name">` +
-//            sorty[i].name + `</td>
-//                <td class="game">` +
-//            sorty[i].game + `</td>
-//                <td class="date">` +
-//            sorty[i].date + `</td>
-//                <td class="score">` +
-//            sorty[i].score + `</td>
-//                <td class="talk">` +
-//            sorty[i].talk + `</td>
-//        </tr>`)
-//    }
-//}
-//
-//
-//
-//function sortDate() {
-//    function compare(a, b) {
-//        if (a.date < b.date) {
-//            return -1;
-//        } else if (a.date > b.date) {
-//            return 1;
-//        } else {
-//            return 0;
-//        }
-//    }
-//    sorty.sort(compare);
-//    $("#score-list").empty();
-//    for (var i = 0; i < sorty.length; i++) {
-//        $("#score-list").append(`       
-//        <tr class="info">
-//                 <td class="name">` +
-//            sorty[i].name + `</td>
-//                <td class="game">` +
-//            sorty[i].game + `</td>
-//                <td class="date">` +
-//            sorty[i].date + `</td>
-//                <td class="score">` +
-//            sorty[i].score + `</td>
-//                <td class="talk">` +
-//            sorty[i].talk + `</td>
-//        </tr>`)
-//    }
-//}
-//
-//}
-//
-//function sortScore() {
-//    function compare(a, b) {
-//        if (a.score < b.score) {
-//            return -1;
-//        } else if (a.score > b.score) {
-//            return 1;
-//        } else {
-//            return 0;
-//        }
-//    }
-//    sorty.sort(compare);
-//    $("#score-list").empty();
-//    for (var i = 0; i < sorty.length; i++) {
-//        $("#score-list").append(`       
-//        <tr class="info">
-//                 <td class="name">` +
-//            sorty[i].name + `</td>
-//                <td class="game">` +
-//            sorty[i].game + `</td>
-//                <td class="date">` +
-//            sorty[i].date + `</td>
-//                <td class="score">` +
-//            sorty[i].score + `</td>
-//                <td class="talk">` +
-//            sorty[i].talk + `</td>
-//        </tr>`)
-//    }
-//}

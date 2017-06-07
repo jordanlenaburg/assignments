@@ -4,7 +4,8 @@ app.config(["$routeProvider", function ($routeProvider) {
 
     $routeProvider
         .when("/home", {
-            templateUrl: "components/home/home.html"
+            templateUrl: "components/home/home.html",
+            controller: "homeCtrl"
         })
         .when("/resume", {
             templateUrl: "components/resume/resume.html"
@@ -27,18 +28,3 @@ app.config(["$routeProvider", function ($routeProvider) {
         })
 }]);
 
-app.directive("navbar", function () {
-
-    return {
-        templateUrl: "components/navbar/navbar.html",
-        restrict: "E"
-    }
-})
-
-app.directive("footer", function () {
-
-    return {
-        templateUrl: "components/navbar/footer.html",
-        restrict: "E"
-    }
-})

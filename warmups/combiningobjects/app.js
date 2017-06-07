@@ -24,27 +24,22 @@ var people = [
         numFriends: 30
     }
 ]
-var combinedList = [];
-function combineUsers (people){
 
+function combineUsers(people) {
     for (var i = 0; i < people.length; i++) {
-        var newlist = people.filter(function (people[i]) {
-            return
-        })
-
-        for (var j = 1; j < people.length; j++) {
-            // console.log(people[i]);
-            // console.log(people[j]);
-            if (people[i].name === people[j].name && people[i].email === people[j].email) {
-                people[i].numFriends += people[j].numFriends;
-                combinedList = people.slice(i, j);
+        var person = people[i]
+        for (var j = i + 1; j < people.length; j++) {
+            if (person !== people[j]) {
+                var secondPerson = people[j];
             }
+            
+            filteredList[0].numFriends += filteredList[j].numFriends;
         }
-    }
+}
 
 }
 
 combineUsers(people);
 
 console.log(people);
-console.log(combinedList);
+// console.log(combinedList);
