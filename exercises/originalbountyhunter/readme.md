@@ -1,1 +1,1 @@
-Exercise to introduce writing functions in Express
+Exercise to introduce writing functions in Express, updated to introduce MongoDB and Mongoose

@@ -41,34 +41,53 @@ body {
 }
 
 .img-logo {
-    width: 100px;
+    width: 150px;
+}
+
+@media (max-width: 990px) {
+    .img-logo {
+        width: 10%;
+    }
+
+    .left {
+        position: absolute;
+        bottom: 30px;
+        left: 10px;
+    }
+
+    .right {
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+    }
+
 }
 
 .img-proj {
     width: 100px;
     transition-property: width;
-    transition-duration: 3s;
+    transition-duration: 2s;
 }
 
 .img-proj:hover {
-    width: 80%;
+    width: 70%;
 
 }
 
 .left {
     position: absolute;
     bottom: 50px;
-    left: 150px;
+    left: 125px;
 }
 
 .right {
     position: absolute;
     bottom: 50px;
-    right: 150px;
+    right: 125px;
 }
 
 .container {
-    padding-bottom: 25px;
+    padding-bottom: 40px;
 }
 
 input {
