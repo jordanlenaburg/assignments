@@ -6,13 +6,13 @@ var favoriteSchema = new mongoose.Schema({
         required: true
     },
     artist: String,
-    images: [String],
-    //thumbnail image in results
-    //link to image in gallery is http://galleries.burningman.org/pages/view.php?ref= + images.gallery_ref
+    imageUrls: [String],
+    category: String,
     url: String,
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     description: String,
     whyLiked: String,
@@ -21,8 +21,6 @@ var favoriteSchema = new mongoose.Schema({
         minute: Number,
         distance: Number,
         category: String,
-        lat: Number,
-        lon: Number
     }
 });
 

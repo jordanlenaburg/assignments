@@ -1,0 +1,14 @@
+<section class="container">
+    <div class="col-xs-12">
+        <h1>{{ singlePiece.name }}</h1>
+    </div>
+    <div class="col-xs-12">
+        <h4>{{ singlePiece.location.hour }}:{{ singlePiece.location.minute |  }} {{ singlePiece.location.distance }}' {{ singlePiece.location.category }}</h4>
+    </div>
+    <div class="col-xs-12" ng-repeat="imageUrl in singlePiece.imageUrls">
+        <img src="{{ imageUrl }}" alt="" class="img-full-width">
+    </div>
+    <div class="col-xs-12 card-1">
+        <p>Description: {{ singlePiece.description }}</p>
+    </div>
+</section>

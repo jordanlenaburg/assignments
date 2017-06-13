@@ -9,11 +9,12 @@ favoritesRoute.get("/", function (req, res) {
     })
 });
 favoritesRoute.post("/", function (req, res) {
-    var fav = new Favorite(req.body);
-    fav.save(function (err, newFav) {
-        if (err) return res.status(500).send(err);
-        return res.status(201).send(newFav)
-    })
+        var fav = new Favorite(req.body);
+        fav.save(function (err, newFav) {
+            if (err) return res.status(500).send(err);
+            return res.status(201).send(newFav)
+        })
+    // }
 });
 favoritesRoute.get("/:id", function (req, res) {
     Favorite.findById(req.params.id, function (err, fav) {

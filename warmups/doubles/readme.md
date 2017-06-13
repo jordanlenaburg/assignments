@@ -1,0 +1,1 @@
+Warmup to use map method to transform an array

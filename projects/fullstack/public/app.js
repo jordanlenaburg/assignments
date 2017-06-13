@@ -1,8 +1,6 @@
-// Create Primary Module
-// Add config for routing
-// var base64 = require("angular-base64");
-
+//Define Angular App
 angular.module("mainApp", ["ngRoute"])
+    //App Routes
     .config(["$routeProvider", function ($routeProvider) {
         $routeProvider
             .when("/home", {
@@ -13,16 +11,19 @@ angular.module("mainApp", ["ngRoute"])
                 templateUrl: "components/query-results/query.html",
                 controller: "queryCtrl"
             })
-            .when("/favorites", {
-                templateUrl: "components/favorites/favorites.html"
-                //controller:
+            .when("/query/:id", {
+                templateUrl: "components/query-results/single-instance/single-art.html",
+                controller: "singleArtCtrl"
             })
-            .when("/favorites/:id", {})
+            .when("/favorites", {
+                templateUrl: "components/favorites/favorites.html",
+                controller: "favCtrl"
+            })
+            .when("/favorites/:id", {
+                templateUrl: "components/favorites/single-instance/single-favorite.html",
+                controller: "singleFavCtrl"
+            })
             .otherwise({
                 redirectTo: "/home"
             })
     }]);
-    // .config(function($httpProvider, $base64) {
-    //     var auth = $base64.encode("c02cd0af512b03a31adfd96274d740f1");
-    //     $httpProvider.defaults.headers.common['Authorization'] = 'Basic ' + auth;
-    // })
