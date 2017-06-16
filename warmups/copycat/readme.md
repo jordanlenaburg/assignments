@@ -1,0 +1,1 @@
+Warmup to copy an object without changing the properties of original object

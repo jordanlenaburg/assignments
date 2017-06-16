@@ -1,1 +1,0 @@
-Full Stack CRUD aaplication to interact with the Burning Man Art API and save favorites to a database
