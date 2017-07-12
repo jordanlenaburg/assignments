@@ -1,0 +1,15 @@
+.site-circle {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.site-circle h3 {
+    padding-top: 110px;
+    color: white;
+    font-size: 25px;
+}

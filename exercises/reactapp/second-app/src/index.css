@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.content {
+    min-height: calc(100vh - 40px) !important;
+}
+
+.text-white {
+    color: white;
+}
+
+.foot {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    bottom: 0px;
+    border-radius: 0px;
+    height: 25px;
+}
