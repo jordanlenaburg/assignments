@@ -1,0 +1,30 @@
+.meme-wrapper {
+    width: 50%;
+    float: right;
+    position: relative;
+}
+
+.Meme {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-size: cover;
+}
+
+.meme-text {
+    color: ghostwhite;
+    font-size: 10vh;
+    text-shadow: 3px 3px #222222;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.top-text {
+    position: absolute;
+    top: 10%;
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: 10%;
+}
